@@ -1,0 +1,35 @@
+@import (reference) '../../less/variables.less';
+
+.body {
+  &__indent {
+    padding-top: 62px;
+
+
+    @media screen and (max-width: @tablet-small) {
+      // margin-bottom: 72px;
+    }
+
+    @media screen and (max-width: @phone-landscape) {
+      // margin-bottom: 64px;
+    }
+  }
+
+  &__indent_bgFourth {
+    background-color: @color-fourth;
+  }
+
+
+  &__indent_l {
+    // margin-bottom: 112px;
+
+    @media screen and (max-width: @tablet-small) {
+      // margin-bottom: 72px;
+    }
+  }
+
+  &__indent_none {
+    @media screen and (max-width: @tablet-small) {
+      // display: none;
+    }
+  }
+}

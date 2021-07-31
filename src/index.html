@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> -->
+    <!-- <meta name="description" content="Клининговая компания Чистая Пенза возьмет 
+  все заботы по уборке на себя. ✪ Предлагаем услуги уборки квартир, домов, офисов, 
+  помещений различного назначения и профессиональный клининг в Пензе. ☎ +7 (953) 020 09 80. ✪ 
+  Мы работаем оперативно, качественно, выезжаем на объект в день заказа услуги или по договоренности.">
+  <meta name="keywords" content="клининговая компания, убрать помещение, вызвать клининговую компанию, сделать уборку,
+   клиннинговая компания, лучшая клининговая компания"> -->
+    <title>Cupboard Shop</title>
+    <link
+      rel="preload"
+      href="fonts/Raleway-Regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Oswald-Regular.woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="header__order js-header__order"></div>
+    <header class="header js-header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="logo">
+            <!-- <img class="logo__icon" src="./common.blocks/logo/logo.svg" alt="Логотип"> -->
+            Logotype
+          </div>
+          <div class="header__dropdown js-header__dropdown">
+            <div class="header__menu">
+              <nav class="header__nav js-header__nav">
+                <ul class="navigation">
+                  <li class="navigation__item">
+                    <a
+                      href="#services"
+                      class="navigation__link js-navigation__link js-scroll-block"
+                      >Товары</a
+                    >
+                  </li>
+                  <li class="navigation__item">
+                    <a
+                      href="#advantages"
+                      class="navigation__link js-navigation__link js-scroll-block"
+                      >Преимущества</a
+                    >
+                  </li>
+                  <li class="navigation__item">
+                    <a
+                      href="#tabs"
+                      class="navigation__link js-navigation__link js-scroll-block"
+                      >Галерея</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div class="contacts">
+                <div class="contacts__wrap">
+                  <div class="contacts__item contacts__item_order_s">
+                    <svg class="contacts__icon">
+                      <use xlink:href="#phone"></use>
+                    </svg>
+                    <a
+                      href="tel:+7(964)877-47-78"
+                      class="contacts__link contacts__link_font_2"
+                      >+7 (964) 877-47-78</a
+                    >
+                  </div>
+                  <!-- <div class="contacts__item">
+                  <svg class="contacts__icon">
+                    <use xlink:href="#phone"></use>
+                  </svg>
+                  <a href="tel:+7(953)020-09-80" class="contacts__link contacts__link_order contacts__link_font_2">+7 (953) 020-09-80</a>
+                </div> -->
+                </div>
+                <div class="contacts__soc social">
+                  <a
+                    class="social__link social_order"
+                    href="https://vk.com/id606189830"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <svg class="social__icon-vk">
+                      <use xlink:href="#vk"></use>
+                    </svg>
+                  </a>
+                  <a
+                    class="social__link"
+                    href="https://www.instagram.com/chistaya58penza?r=nametag"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <svg class="social__icon-inst">
+                      <use xlink:href="#inst"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__btn js-header__btn"></div>
+          <div class="header__btn_close js-header__btn_close"></div>
+        </div>
+      </div>
+      <div class="header__horizont-line js-header__horizont-line"></div>
+    </header>
+
+    <main class="main js-header__indent">
+      <section class="slider">
+        <h2 class="visually-hidden">Слайдер</h2>
+        <div class="slider__container js-slider__container">
+          <div class="swiper-wrapper">
+            <div
+              class="slider__item swiper-slide"
+              style="background: url(${require('./common.blocks/slider/slider__img_1.jpg')}) 50% 50%; background-size: cover;"
+            >
+              <div class="container container_from_slider">
+                <div class="slider__title">Мебель от Профессионалов</div>
+                <p class="slider__text">
+                  Наши клиенты всегда довольны результатом!
+                </p>
+              </div>
+            </div>
+            <div
+              class="slider__item swiper-slide"
+              style="background: url(${require('./common.blocks/slider/slider__img_1.jpg')}) 50% 50%; background-size: cover;"
+            >
+              <div class="container container_from_slider">
+                <div class="slider__title">Оптом дешевле</div>
+                <p class="slider__text">
+                  При заказе более 30 000 рублей - скидка 10%
+                </p>
+              </div>
+            </div>
+            <div
+              class="slider__item swiper-slide"
+              style="background: url(${require('./common.blocks/slider/slider__img_1.jpg')}) 50% 50%; background-size: cover;"
+            >
+              <div class="container container_from_slider">
+                <div class="slider__title">Постоянным клиентам</div>
+                <p class="slider__text">
+                  При повторном заказе мебели - скидка 10%
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="slider__pagination"></div>
+        </div>
+      </section>
+
+      <div class="body__indent body__indent_bgFourth">
+        <h2 class="title title_two title_order_l">Ассортимент</h2>
+        <div class="slider-2">
+          <div class="slider-2__container js-slider-2__container">
+            <div class="swiper-wrapper">
+              <div class="slider-2__item swiper-slide">
+                <div class="grid__item grid__item_center_mob">
+                  <div class="grid__inner">
+                    <div class="grid__top">
+                      <a href="#" class="grid__link">
+                        <img
+                          class="grid__img grid__img_first"
+                          src="./common.blocks/grid/grid__img-1.jpg"
+                          alt="Картинка товара"
+                        />
+                        <img
+                          class="grid__img grid__img_second"
+                          src="./common.blocks/grid/grid__img-2.jpg"
+                          alt="Картинка товара"
+                        />
+                      </a>
+                      <!-- <div class="grid__button-box">
+                        <a
+                          href="#popup-buy"
+                          class="button button_first button_size_m button_block js-popup__buy"
+                          data-effect="mfp-zoom-in"
+                          >Быстрый просмотр</a
+                        >
+                      </div> -->
+                    </div>
+                    <div class="grid__bottom">
+                      <div class="grid__title">Шкаф №1</div>
+                      <div class="grid__price">10 000 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="grid__item grid__item_center_mob">
+                  <div class="grid__inner">
+                    <div class="grid__top">
+                      <a href="#" class="grid__link">
+                        <img
+                          class="grid__img"
+                          src="./common.blocks/grid/grid__img-2.jpg"
+                          alt="Картинка товара"
+                        />
+                        
+                      </a>
+                      <!-- <div class="grid__button-box">
+                        <a
+                          href="#popup-buy"
+                          class="button button_first button_size_m button_block js-popup__buy"
+                          data-effect="mfp-zoom-in"
+                          >Быстрый просмотр</a
+                        >
+                      </div> -->
+                    </div>
+                    <div class="grid__bottom">
+                      <div class="grid__title">Шкаф №1</div>
+                      <div class="grid__price">10 000 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="grid__item grid__item_center_mob">
+                  <div class="grid__inner">
+                    <div class="grid__top">
+                      <a href="#" class="grid__link">
+                        <img
+                          class="grid__img"
+                          src="./common.blocks/grid/grid__img-3.jpg"
+                          alt="Картинка товара"
+                        />
+                        
+                      </a>
+                      <!-- <div class="grid__button-box">
+                        <a
+                          href="#popup-buy"
+                          class="button button_first button_size_m button_block js-popup__buy"
+                          data-effect="mfp-zoom-in"
+                          >Быстрый просмотр</a
+                        >
+                      </div> -->
+                    </div>
+                    <div class="grid__bottom">
+                      <div class="grid__title">Шкаф №1</div>
+                      <div class="grid__price">10 000 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="grid__item grid__item_center_mob">
+                  <div class="grid__inner">
+                    <div class="grid__top">
+                      <a href="#" class="grid__link">
+                        <img
+                          class="grid__img"
+                          src="./common.blocks/grid/grid__img-1.jpg"
+                          alt="Картинка товара"
+                        />
+                        
+                      </a>
+                      <!-- <div class="grid__button-box">
+                        <a
+                          href="#popup-buy"
+                          class="button button_first button_size_m button_block js-popup__buy"
+                          data-effect="mfp-zoom-in"
+                          >Быстрый просмотр</a
+                        >
+                      </div> -->
+                    </div>
+                    <div class="grid__bottom">
+                      <div class="grid__title">Шкаф №1</div>
+                      <div class="grid__price">10 000 руб.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div
+            class="slider-2__pagination js-slider-2__pagination swiper-pagination"
+          ></div>
+          <!-- Add navigation buttons -->
+          <div class="btn-slider__prev btn-slider__prev_none js-slider-2__prev">
+            <svg class="icon icon_prev icon_sixth">
+              <use xlink:href="#arrow-prev"></use>
+            </svg>
+          </div>
+          <div class="btn-slider__next btn-slider__next_none js-slider-2__next">
+            <svg class="icon icon_next">
+              <use xlink:href="#arrow-next"></use>
+            </svg>
+          </div>
+          <div class="slider-2__wrap-btn">
+            <button class="button button_brand button_size_l">Рассчитать шкаф</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="tabs" id="tabs">
+        <div class="container">
+          <h2 class="title title_two title_order_l">Галерея</h2>
+          <ul class="tabs__list tabs__list_order">
+            <li class="tabs__item is-active" data-tab="tab-1">Комнаты</li>
+            <li class="tabs__item" data-tab="tab-2">Коридор</li>
+            <li class="tabs__item" data-tab="tab-3">Кухня</li>
+            <li class="tabs__item" data-tab="tab-4">Ванная</li>
+          </ul>
+
+          <div class="tabs__content js-tabs__content is-visible" id="tab-1">
+            <div class="tabs__container">
+              <div class="tabs__img-container">
+                <img
+                  class="tabs__img"
+                  src="./common.blocks/tabs/tabs__img_1.jpg"
+                  alt="Комната"
+                />
+              </div>
+              <div class="tabs__indicator tabs__indicator_room_1">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">Отмоем окна&nbsp;и подоконники</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_room_2">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">Сделаем химчистку мягкой мебели</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_room_3">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">Очистим стеклянные поверхности</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_room_4">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">Очистим ковровые покрытия</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_room_5">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">
+                    Протрем&nbsp;и польем домашние растения
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__content js-tabs__content" id="tab-2">
+            <div class="tabs__container">
+              <div class="tabs__img-container">
+                <img
+                  class="tabs__img"
+                  src="./common.blocks/tabs/tabs__img_2.jpg"
+                  alt="Коридор"
+                />
+              </div>
+              <div class="tabs__indicator tabs__indicator_hallway_1">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">Отмоем полофоны</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_hallway_2">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">Прогладим&nbsp;и разложим вещи</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_hallway_3">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">Отмоем&nbsp;и отполируем пол</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_hallway_4">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">Избавим картины от пыли</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__content js-tabs__content" id="tab-3">
+            <div class="tabs__container">
+              <div class="tabs__img-container">
+                <img
+                  class="tabs__img"
+                  src="./common.blocks/tabs/tabs__img_3.jpg"
+                  alt="Кухня"
+                />
+              </div>
+              <div class="tabs__indicator tabs__indicator_kitchen_1">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">
+                    Отмоем хододильник&nbsp;и сделаем ревизию
+                  </p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_kitchen_2">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">Удалим трудновыводимую грязь</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_kitchen_3">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">
+                    Удалим нагар&nbsp;и жир с плиты и духового шкафа
+                  </p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_kitchen_4">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">Сделаем Ваш фартук как новый</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_kitchen_5">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">Вынесем весь мусор</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs__content js-tabs__content" id="tab-4">
+            <div class="tabs__container">
+              <div class="tabs__img-container">
+                <img
+                  class="tabs__img"
+                  src="./common.blocks/tabs/tabs__img_4.jpg"
+                  alt="Ванная"
+                />
+              </div>
+              <div class="tabs__indicator tabs__indicator_bathroom_1">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_left">
+                  <p class="tabs__phrase">
+                    Вернем первоначальный вид сантехники, хромирование
+                  </p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_bathroom_2">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">Дезинфицируем&nbsp;и удалим налет</p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_bathroom_3">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">
+                    Удалим загрязнения&nbsp;и начистим стеклянные поверхности
+                  </p>
+                </div>
+              </div>
+              <div class="tabs__indicator tabs__indicator_bathroom_4">
+                <div class="tabs__mark">i</div>
+                <div class="tabs__tooltipe tabs__tooltipe_right">
+                  <p class="tabs__phrase">
+                    Вернем Вашей плитке чистату&nbsp;и сияние
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__text">Задайте вопрос прямо сейчас:</p>
+        <div class="footer__social social">
+          <a
+            class="social__btn social__btn_vk"
+            href="https://vk.com/id606189830"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="social__icon-vk">
+              <use xlink:href="#vk-mono"></use>
+            </svg>
+            ВКонтакте
+          </a>
+          <a
+            class="social__btn social__btn_inst"
+            href="https://www.instagram.com/chistaya58penza?r=nametag"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg class="social__icon-inst">
+              <use xlink:href="#inst-mono"></use>
+            </svg>
+            Instagram
+          </a>
+        </div>
+        <p class="footer__copy">
+          Разработано
+          <a
+            class="footer__link"
+            href="https://www.instagram.com/_dmitriy_40in_/"
+            target="_blank"
+            rel="noopener"
+            >dmitriy_40in</a
+          >
+          2020г.
+        </p>
+      </div>
+    </footer>
+
+    <button class="to-top-btn js-button-top">
+      <svg class="to-top-btn__icon">
+        <use xlink:href="#keyboard_arrow_up"></use>
+      </svg>
+    </button>
+    <script src="js/jquery_3.5.1.min.js"></script>
+  </body>
+</html>
