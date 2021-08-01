@@ -1,59 +1,46 @@
 @import (reference) '../../less/variables.less';
 
 .btn-slider {
-  &__prev,
-  &__next {
-    position: absolute;
-    z-index: 10;
-    top: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  
+  width: 40px;
+  height: 40px;
+  margin-top: -24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid @color-dark-light;
+  
+  cursor: pointer;
+  transform: translateY(-50%);
+  
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 27px 44px;
+  background-color: @color-third;
+  transition: @transition;
 
-    width: 26px;
-    height: 48px;
-    margin-top: -24px;
-
-    cursor: pointer;
-    transform: translateY(-50%);
-
-    outline: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 27px 44px;
+  @media screen and (max-width: @tablet-landscape) {
+    display: none;
   }
 
-  &__prev_none,
-  &__next_none {
-    @media screen and (max-width: @desktop) {
-      display: none;
-    }
+  &:hover {
+    border: 1px solid @color-brand;
+  }
+
+  &:hover svg {
+    fill: @color-brand;
   }
 
   &__prev {
-    right: auto;
-    left: -42px;
+    left: 16px;
   }
 
   &__next {
-    right: -42px;
-    left: auto;
-  }
-
-  &__prev:hover .icon_prev,
-  &__next:hover .icon_next,
-  &__prev:hover .icon_prev_thin,
-  &__next:hover .icon_next_thin {
-    fill: @color-first;
-  }
-
-  &__prev_popup,
-  &__next_popup {
-    margin-top: 0;
-  }
-
-  &__next_popup {
-    right: 0;
-  }
-
-  &__prev_popup {
-    left: 0;
+    right: 16px;
   }
 }

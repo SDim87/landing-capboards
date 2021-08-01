@@ -1,0 +1,131 @@
+@import (reference) "../../less/variables.less";
+
+.about {
+}
+
+.about__wrapper {
+  display: flex;
+}
+
+.about__list {
+  list-style-type: none;
+  min-height: 300px;
+  max-width: 33.3%;
+  flex: 0 0 auto;
+  margin-right: 80px;
+}
+
+.about__item {
+  cursor: pointer;
+  position: relative;
+  transition: @transition;
+  color: rgba(@color-text-third, 0.5);
+  padding-left: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 6px;
+    background-color: @color-fifth;
+    border-radius: 12px;
+    -webkit-transition: height 0.2s ease-in-out;
+    transition: height 0.2s ease-in-out;
+  }
+
+  &.isActive::before {
+    height: 100%;
+  }
+
+  &.isActive {
+    color: #484444;
+  }
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.about__text {
+  font-size: 14px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2 ease-in-out;
+
+  .about__item.isActive & {
+    margin-top: 8px;
+    max-height: 300px;
+  }
+}
+
+.about__picture {
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.about__filter {
+  width: 336px;
+  height: 88px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -300px;
+  z-index: 10;
+  background-color: @color-dark-light;
+  background-blend-mode: multiply;
+  border-radius: 12px;
+  transition: @transition;
+
+  &.isActive {
+    bottom: 32px;
+  }
+}
+
+.about__filter-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.about__btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid @color-dark-light;
+    box-sizing: border-box;
+    background-color: @color-third;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    padding: 4px;
+    transition: @transition;
+    
+    &:not(:last-child) {
+        margin-right: 16px;
+    }
+    
+    &.isActive {
+        color: @color-brand;
+        border: 1px solid @color-brand;
+    }
+
+    & span {
+        margin-top: 4px;
+    }
+}
