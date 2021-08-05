@@ -1,7 +1,7 @@
-const $header = $('.js-header');
+const $header = $('.js-header')
 
 function heightHeader() {
-  return $header.innerHeight();
+  return $header.innerHeight()
 }
 
-export default heightHeader;
+export default heightHeader

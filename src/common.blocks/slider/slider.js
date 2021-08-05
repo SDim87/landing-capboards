@@ -9,12 +9,14 @@ const sliderCategory = new Swiper('.js-slider__container', {
     el: '.slider__pagination',
     clickable: true,
   },
-});
+})
 
 // Остановка прокрутки при наведении
-$('.js-slider__container').hover(() => {
-  sliderCategory.autoplay.stop();
-}, () => {
-  sliderCategory.autoplay.start();
-});
-
+$('.js-slider__container').hover(
+  () => {
+    sliderCategory.autoplay.stop()
+  },
+  () => {
+    sliderCategory.autoplay.start()
+  },
+)

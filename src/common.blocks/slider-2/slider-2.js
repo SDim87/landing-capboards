@@ -1,4 +1,4 @@
-import closeMenu from '../cabinet/cabinet';
+import closeMenu from '../cabinet/cabinet'
 
 // slider-2
 const sliderCategory = new Swiper('.js-slider-2__container', {
@@ -29,13 +29,16 @@ const sliderCategory = new Swiper('.js-slider-2__container', {
       slidesPerView: 1,
     },
   },
-});
+})
 
-$('.js-slider-2__container').hover(() => {
-  sliderCategory.autoplay.stop();
-}, () => {
-  sliderCategory.autoplay.start();
-});
+$('.js-slider-2__container').hover(
+  () => {
+    sliderCategory.autoplay.stop()
+  },
+  () => {
+    sliderCategory.autoplay.start()
+  },
+)
 
 // slider-2_sale
 const sliderSecond = new Swiper('.js-slider-2__container_sale', {
@@ -66,21 +69,23 @@ const sliderSecond = new Swiper('.js-slider-2__container_sale', {
       slidesPerView: 1,
     },
   },
-});
+})
 
-$('.js-slider-2__container_sale').hover(() => {
-  sliderSecond.autoplay.stop();
-}, () => {
-  sliderSecond.autoplay.start();
-});
-
+$('.js-slider-2__container_sale').hover(
+  () => {
+    sliderSecond.autoplay.stop()
+  },
+  () => {
+    sliderSecond.autoplay.start()
+  },
+)
 
 // touchstart -> close menu cabinet
 sliderCategory.on('touchStart', () => {
-  closeMenu();
-});
+  closeMenu()
+})
 
 // touchstart -> close menu cabinet
 sliderSecond.on('touchStart', () => {
-  closeMenu();
-});
+  closeMenu()
+})
