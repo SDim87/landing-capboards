@@ -33,6 +33,7 @@ const State = {
 
 $item.first().addClass(isActive)
 
+// смена блоков
 $item.click(function onChangeItem() {
   const $this = $(this)
 
@@ -68,6 +69,7 @@ $item.click(function onChangeItem() {
   }
 })
 
+// смена настройки внутренних ящиков
 $btnPlace.click(function onBtnPlace() {
   const $this = $(this)
   const numberPlace = $this.attr('data-place')
@@ -79,6 +81,7 @@ $btnPlace.click(function onBtnPlace() {
   State.getImage()
 })
 
+// смена фильтров цвета
 $btnColor.click(function onBtnColor() {
   const $this = $(this)
   const color = $this.attr('data-color')

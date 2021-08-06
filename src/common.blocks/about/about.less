@@ -4,6 +4,10 @@
 
 .about__wrapper {
   display: flex;
+
+  @media screen and (max-width: @tablet) {
+    display: block;
+  }
 }
 
 .about__list {
@@ -14,6 +18,13 @@
   margin-right: 80px;
 
   list-style-type: none;
+
+  @media screen and (max-width: @tablet) {
+    max-width: 345px;
+    min-height: 220px;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }
 
 .about__item {
@@ -59,6 +70,10 @@
 .about__title {
   font-size: 24px;
   font-weight: 700;
+
+  @media screen and (max-width: @tablet) {
+    font-size: 20px;
+  }
 }
 
 .about__text {
@@ -69,6 +84,10 @@
   transition: all 0.2 ease-in-out;
 
   font-size: 14px;
+
+  @media screen and (max-width: @tablet) {
+    font-size: 12px;
+  }
 
   .about__item.isActive & {
     max-height: 300px;
@@ -82,6 +101,11 @@
   overflow: hidden;
 
   border-radius: 20px;
+
+  @media screen and (max-width: @tablet) {
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 
 .about__filter {
@@ -104,8 +128,23 @@
 
   background-blend-mode: multiply;
 
+  @media screen and (max-width: @tablet) {
+    width: auto;
+    height: 64px;
+
+    border-radius: 0;
+  }
+
+  @media screen and (max-width: @phone-landscape) {
+    height: 45px;
+  }
+
   &.isActive {
     bottom: 32px;
+
+    @media screen and (max-width: @tablet) {
+      bottom: 0;
+    }
   }
 }
 
@@ -116,10 +155,6 @@
 
   justify-content: center;
   align-items: center;
-
-  &_colors {
-    justify-content: space-between;
-  }
 }
 
 .about__place {
@@ -149,6 +184,15 @@
     margin-right: 16px;
   }
 
+  @media screen and (max-width: @tablet) {
+    width: 74px;
+    height: 46px;
+  }
+
+  @media screen and (max-width: @phone-landscape) {
+    height: 28px;
+  }
+
   &.isActive {
     pointer-events: none;
 
@@ -158,6 +202,12 @@
 
   & span {
     margin-top: 4px;
+  }
+
+  & svg {
+    @media screen and (max-width: @phone-landscape) {
+      display: none;
+    }
   }
 }
 
@@ -176,10 +226,25 @@
 
   font-size: 0;
 
+  @media screen and (max-width: @phone-landscape) {
+    width: 24px;
+    height: 24px;
+
+    border-width: 1px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 32px;
+
+    @media screen and (max-width: @tablet) {
+      margin-right: 24px;
+    }
+  }
+
   &.isActive {
     pointer-events: none;
 
-    border: 2px solid @color-brand;
+    border-color: @color-brand;
   }
 }
 
