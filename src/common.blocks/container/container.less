@@ -1,12 +1,16 @@
 @import (reference) '../../less/variables.less';
 
 .container {
-  max-width: 1280px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 48px;
   
   @media screen and (max-width: @tablet-small) {
     padding: 0 16px;
+  }
+
+  &_small {
+    max-width: none;
   }
 
   &_above {
