@@ -1,15 +1,36 @@
+const COUNT_IMG = 3
+const INTERVAL_CHANGE_IMG = 2000
+const INTERVAL_PLAY_SLIDER = COUNT_IMG * INTERVAL_CHANGE_IMG
+
 const isActive = 'is-active'
+
 const $sliderFirst = $('.js-wardrobe__slider-1')
 const $sliderSecond = $('.js-wardrobe__slider-2')
 const $sliderThird = $('.js-wardrobe__slider-3')
 const $info = $('.js-wardrobe__info')
-const COUNT_IMG = 3
-const COUNT_INTERVAL = 2000
+const $line = $('.js-wardrobe__line')
 
 $sliderFirst.next($info).addClass(isActive)
 
 const funcInterval = (slider) => {
   slider.next($info).addClass(isActive)
+
+  // Animation line
+  slider
+    .find($line)
+    .delay(INTERVAL_CHANGE_IMG - 500)
+    .animate(
+      {
+        width: '100%',
+      },
+      INTERVAL_PLAY_SLIDER,
+      'swing',
+      () => {
+        slider.find($line).css({
+          width: 0,
+        })
+      },
+    )
 
   const interval = setInterval(() => {
     const $firstImg = slider.find('.js-wardrobe__img').first()
@@ -23,13 +44,14 @@ const funcInterval = (slider) => {
     if ($imgActive.next().length === 0) {
       clearInterval(interval)
       slider.next($info).removeClass(isActive)
+      slider.find($line).removeClass(isActive)
 
       return
     }
 
     $imgActive.next().addClass(isActive)
     $imgActive.prev().prevObject.removeClass(isActive)
-  }, COUNT_INTERVAL)
+  }, INTERVAL_CHANGE_IMG)
 }
 
 const ActiveSlider = {
@@ -63,4 +85,4 @@ setInterval(() => {
   } else if (ActiveSlider.getStep() === 2) {
     ActiveSlider.playThirdSlider()
   }
-}, COUNT_IMG * COUNT_INTERVAL)
+}, INTERVAL_PLAY_SLIDER)
