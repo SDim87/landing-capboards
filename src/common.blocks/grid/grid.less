@@ -1,8 +1,14 @@
 @import (reference) "../../less/variables.less";
 
 .grid {
+  & .swiper-slide {
+    height: auto;
+  }
+
   &__item {
     position: relative;
+
+    height: 100%;
   }
 
   &__item_center_mob {
@@ -18,6 +24,9 @@
   }
 
   &__inner {
+    display: flex;
+    flex-direction: column;
+
     box-sizing: border-box;
     height: 100%;
 
@@ -26,6 +35,8 @@
 
   &__top {
     position: relative;
+
+    flex-shrink: 0;
 
     .grid__item_ditails & {
       overflow: hidden;
@@ -86,9 +97,14 @@
     position: relative;
     z-index: 2;
 
+    display: flex;
+    flex-direction: column;
+
     padding: 16px;
 
     background-color: @color-text-second;
+
+    flex-grow: 1;
 
     .grid__item_ditails & {
       background-color: transparent;
@@ -96,14 +112,15 @@
   }
 
   &__title {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 
     user-select: none;
 
     font-family: @font-oswald;
     font-size: 24px;
 
-    .grid__item_ditails & {
+    .ditails &,
+    .segments & {
       @media screen and (max-width: @tablet) {
         font-size: 18px;
       }
@@ -126,5 +143,13 @@
     color: @color-brand;
 
     font-size: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+
+    @media screen and (max-width: @tablet) {
+      font-size: 14px;
+    }
   }
 }

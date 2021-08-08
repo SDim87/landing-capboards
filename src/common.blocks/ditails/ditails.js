@@ -1,9 +1,9 @@
-import closeMenu from '../cabinet/cabinet'
-
-const sliderCategory = new Swiper('.js-ditails__container', {
+// eslint-disable-next-line no-unused-vars
+const sliderDitails = new Swiper('.js-ditails__container', {
   freeMode: true,
   spaceBetween: 16,
   slidesPerView: 'auto',
+  grabCursor: true,
   // autoplay: {
   //   delay: 4000,
   // },
@@ -20,9 +20,4 @@ const sliderCategory = new Swiper('.js-ditails__container', {
   //     slidesPerView: 1,
   //   },
   // },
-})
-
-// touchstart -> close menu cabinet
-sliderCategory.on('touchStart', () => {
-  closeMenu()
 })

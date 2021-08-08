@@ -1,10 +1,8 @@
-import closeMenu from '../cabinet/cabinet'
-
-// products
 const sliderProducts = new Swiper('.js-products__container', {
   slidesPerView: 4,
   spaceBetween: 16,
   observer: true,
+  grabCursor: true,
   autoplay: {
     delay: 4000,
   },
@@ -39,8 +37,3 @@ $('.js-products__container').hover(
     sliderProducts.autoplay.start()
   },
 )
-
-// touchstart -> close menu cabinet
-sliderProducts.on('touchStart', () => {
-  closeMenu()
-})
