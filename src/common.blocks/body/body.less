@@ -1,4 +1,4 @@
-@import (reference) "../../less/variables.less";
+@import (reference) '../../less/variables.less';
 
 .body {
   &__indent {
@@ -23,5 +23,11 @@
 
   &__indent_bgSixth {
     background-color: @color-sixth;
+  }
+
+  &__indent_bgCallback {
+    background: linear-gradient(rgba(@color-third, 0.2)),
+                url('./callback__bg.webp') 50% 50% no-repeat;
+    background-size: cover;
   }
 }
