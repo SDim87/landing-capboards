@@ -60,18 +60,10 @@
                     <svg class="contacts__icon">
                       <use xlink:href="#phone"></use>
                     </svg>
-                    <a
-                      href="tel:+7(964)877-47-78"
-                      class="contacts__link contacts__link_font_2"
+                    <a href="tel:+7(964)877-47-78" class="contacts__link"
                       >+7 (964) 877-47-78</a
                     >
                   </div>
-                  <!-- <div class="contacts__item">
-                  <svg class="contacts__icon">
-                    <use xlink:href="#phone"></use>
-                  </svg>
-                  <a href="tel:+7(953)020-09-80" class="contacts__link contacts__link_order contacts__link_font_2">+7 (953) 020-09-80</a>
-                </div> -->
                 </div>
                 <div class="contacts__soc social">
                   <a
@@ -182,13 +174,24 @@
               <div class="about__picture">
                 <div class="about__img">
                   <img
-                    loading="lazy"
                     class="image js_about__img"
-                    src="./common.blocks/about/about__img_black_1.webp"
+                    src="./common.blocks/about/about__size_img-1.webp"
                     alt="Изображение шкафа"
                   />
                 </div>
                 <div class="visually-hidden">
+                  <img
+                    loading="lazy"
+                    class="image js_about__img"
+                    src="./common.blocks/about/about__size_img-2.webp"
+                    alt="Изображение шкафа"
+                  />
+                  <img
+                    loading="lazy"
+                    class="image js_about__img"
+                    src="./common.blocks/about/about__size_img-3.webp"
+                    alt="Изображение шкафа"
+                  />
                   <img
                     loading="lazy"
                     class="image js_about__img"
@@ -237,6 +240,19 @@
                     src="./common.blocks/about/about__img_multy_2.webp"
                     alt="Изображение шкафа"
                   />
+                </div>
+                <div class="about__filter js_about__filter_size">
+                  <div class="about__filter-wrap">
+                    <button class="about__place js-about__size" data-size="1">
+                      Мини
+                    </button>
+                    <button class="about__place js-about__size" data-size="2">
+                      Средний
+                    </button>
+                    <button class="about__place js-about__size" data-size="3">
+                      Большой
+                    </button>
+                  </div>
                 </div>
                 <div class="about__filter js_about__filter_double">
                   <div class="about__filter-wrap">
@@ -1460,9 +1476,13 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="footer__text">Задайте вопрос прямо сейчас:</p>
-        <div class="footer__social social">
-          <a
+        <div class="">
+          <p>Адрес</p>
+          <p>График работы</p>
+          <p>Телефон</p>
+          <p>Почта</p>
+        </div>
+        <!-- <a
             class="social__btn social__btn_vk"
             href="https://vk.com/id606189830"
             target="_blank"
@@ -1483,10 +1503,10 @@
               <use xlink:href="#inst-mono"></use>
             </svg>
             Instagram
-          </a>
-        </div>
-        <!-- <p class="footer__copy">
-          Разработано
+          </a> -->
+        <p class="footer__copy">
+          Copiright &copy; 2021
+          <!-- Разработано
           <a
             class="footer__link"
             href="https://www.instagram.com/_dmitriy_40in_/"
@@ -1494,8 +1514,8 @@
             rel="noopener"
             >dmitriy_40in</a
           >
-          2020г.
-        </p> -->
+          2020г. -->
+        </p>
       </div>
     </footer>
 
