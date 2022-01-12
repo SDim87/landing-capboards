@@ -1,20 +1,37 @@
-@import (reference) '../../less/variables.less';
+@import (reference) "../../less/variables.less";
 
 .logo {
-  width: 152px;
-  height: 51px;
-  margin-right: 64px;
-  display: flex;
-  align-items: center;
-
+  width: 130px;
+  
+  text-transform: uppercase;
+  
+  color: @color-brand;
+  
+  font-weight: bold;
+  
   @media screen and (max-width: @hamburger) {
     width: 120px;
-    height: 40px;
-    align-items: initial;
+  }
+
+  &_py10 {
+    padding: 10px 0;
+  }
+  
+  &_mr {
+    margin-right: 64px;
+  }
+
+  &_white {
+    color: @color-text-second;
+  }
+
+  &_grey {
+    color: @color-gray-normal;
   }
 
   &__icon {
-    width: 100%;
     display: block;
+
+    width: 100%;
   }
 }

@@ -4,22 +4,10 @@
   background-color: @color-text;
   padding: 60px 0;
   color: @color-gray-normal;
-  
-  &__social {
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 24px 32px;
-    border-bottom: 1px solid @color-gray-normal;
 
-    @media screen and (max-width: @phone-landscape) {
-      flex-wrap: wrap;
-    }
-  }
-  
-  &__text {
-    text-align: center;
-    margin-bottom: 32px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__copy {
@@ -28,7 +16,7 @@
     font-size: 14px;
   }
 
-  &__link {
-    color: @color-brand;
+  &__email {
+    color: @color-text-second;
   }
 }

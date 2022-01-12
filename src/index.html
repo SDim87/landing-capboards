@@ -7,30 +7,75 @@
     <title>Cupboard Shop</title>
     <link
       rel="preload"
-      href="fonts/Raleway-Regular.woff2"
+      href="fonts/Roboto-Regular.woff2"
       as="font"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="fonts/Oswald-Regular.woff2"
+      href="fonts/Roboto-Bold.woff2"
       as="font"
       crossorigin="anonymous"
     />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      /* eslint-disable */
+      ;(function(m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function() {
+            ;(m[i].a = m[i].a || []).push(arguments)
+          }
+        m[i].l = 1 * new Date()
+        ;(k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a)
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js',
+        'ym',
+      )
+
+      ym(86306175, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      })
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/86306175"
+          style="position:absolute; left:-9999px;"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <div class="header__order js-header__order"></div>
     <header class="header js-header">
       <div class="container">
         <div class="header__wrapper">
-          <div class="logo">
-            <!-- <img class="logo__icon" src="./common.blocks/logo/logo.svg" alt="Логотип"> -->
-            Logotype
-          </div>
+          <a href="index.html" class="logo logo_mr logo_py10">
+            On shelf
+          </a>
           <div class="header__dropdown js-header__dropdown">
             <div class="header__menu">
               <nav class="header__nav js-header__nav">
                 <ul class="navigation">
+                  <li class="navigation__item">
+                    <a
+                      href="#about"
+                      class="navigation__link js-navigation__link js-scroll-block"
+                      >Конструктор</a
+                    >
+                  </li>
                   <li class="navigation__item">
                     <a
                       href="#products"
@@ -40,17 +85,19 @@
                   </li>
                   <li class="navigation__item">
                     <a
-                      href="#about"
+                      href="#ditails"
                       class="navigation__link js-navigation__link js-scroll-block"
-                      >О нас</a
                     >
+                      Детали
+                    </a>
                   </li>
                   <li class="navigation__item">
                     <a
-                      href="#tabs"
+                      href="#callback"
                       class="navigation__link js-navigation__link js-scroll-block"
-                      >Галерея</a
                     >
+                      Материалы
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -65,7 +112,7 @@
                     >
                   </div>
                 </div>
-                <div class="contacts__soc social">
+                <!-- <div class="contacts__soc social">
                   <a
                     class="social__link social_order"
                     href="https://vk.com/id606189830"
@@ -86,7 +133,7 @@
                       <use xlink:href="#inst"></use>
                     </svg>
                   </a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -108,32 +155,16 @@
               style="background: url(${require('./common.blocks/slider/slider__img_1.jpg')}) 50% 50%; background-size: cover;"
             >
               <div class="container container_from_slider">
-                <div class="slider__title">Мебель от Профессионалов</div>
-                <p class="slider__text">
-                  Наши клиенты всегда довольны результатом!
-                </p>
-              </div>
-            </div>
-            <div
-              class="slider__item swiper-slide"
-              style="background: url(${require('./common.blocks/slider/slider__img_1.jpg')}) 50% 50%; background-size: cover;"
-            >
-              <div class="container container_from_slider">
-                <div class="slider__title">Оптом дешевле</div>
-                <p class="slider__text">
-                  При заказе более 30 000 рублей - скидка 10%
-                </p>
-              </div>
-            </div>
-            <div
-              class="slider__item swiper-slide"
-              style="background: url(${require('./common.blocks/slider/slider__img_1.jpg')}) 50% 50%; background-size: cover;"
-            >
-              <div class="container container_from_slider">
-                <div class="slider__title">Постоянным клиентам</div>
-                <p class="slider__text">
-                  При повторном заказе мебели - скидка 10%
-                </p>
+                <div class="slider__title">
+                  Самый простой способ заказать шкаф по размерам
+                </div>
+                <a
+                  href="#popup"
+                  class="button button_brand button_size_l js-popup"
+                  data-effect="mfp-zoom-in"
+                >
+                  Рассчитать шкаф
+                </a>
               </div>
             </div>
           </div>
@@ -151,23 +182,23 @@
             <div class="about__wrapper">
               <ul class="about__list">
                 <li class="about__item js_about__item" id="about__block-1">
-                  <p class="about__title">Задавайте размер</p>
+                  <p class="about__title">Задайте размер</p>
                   <p class="about__text js_about__text">
-                    Настройте ширину, высоту, глубину, чтобы максимально
-                    использовать ваше пространство.
+                    Ширина, высота и глубина могут быть любыми. Вы сможете
+                    использовать пространство по-максимуму.
                   </p>
                 </li>
                 <li class="about__item js_about__item" id="about__block-2">
-                  <p class="about__title">Создавайте свой проект</p>
+                  <p class="about__title">Выберите наполнение и фасад</p>
                   <p class="about__text js_about__text">
-                    Выберите высокие двери только с внутренними ящиками или
-                    добавьте внешние ящики для более быстрого доступа.
+                    Минималистичные высокие двери с удобными внутренними
+                    ящиками, или внешние ящики для более быстрого доступа.
                   </p>
                 </li>
                 <li class="about__item js_about__item" id="about__block-3">
-                  <p class="about__title">Выберите свой цвет</p>
+                  <p class="about__title">Выберите цвет</p>
                   <p class="about__text js_about__text">
-                    Выберите цвет, соответствующий вашему пространству.
+                    Цвет, подходящий именно вам.
                   </p>
                 </li>
               </ul>
@@ -322,7 +353,9 @@
       <div class="body__indent body__indent_bgFourth" id="products">
         <div class="container">
           <section class="products">
-            <h2 class="title title_two title_order_l">Продукция</h2>
+            <h2 class="title title_foure title_order_l">
+              Вдохновитесь нашим дизайном и создайте свой
+            </h2>
             <div class="products__box" style="position: relative;">
               <div class="products__container js-products__container">
                 <div class="swiper-wrapper">
@@ -459,18 +492,22 @@
               class="products__pagination js-products__pagination swiper-pagination"
             ></div>
             <div class="products__wrap-btn">
-              <button class="button button_brand button_size_l">
+              <a
+                href="#popup"
+                class="button button_brand button_size_l js-popup"
+                data-effect="mfp-zoom-in"
+              >
                 Рассчитать шкаф
-              </button>
+              </a>
             </div>
           </section>
         </div>
       </div>
       <!-- ========== Ditails ============== -->
-      <div class="body__indent body__indent_bgFourth" id="products">
+      <div class="body__indent body__indent_bgFourth" id="ditails">
         <div class="container container_small">
           <section class="ditails">
-            <h2 class="title title_two title_order_l">Ассортимент</h2>
+            <h2 class="title title_foure title_order_l">Детали</h2>
             <div class="ditails__box" style="position: relative;">
               <div class="ditails__container js-ditails__container">
                 <div class="swiper-wrapper">
@@ -645,9 +682,13 @@
             </div>
             <!-- button -->
             <div class="ditails__wrap-btn">
-              <button class="button button_brand button_size_l">
+              <a
+                href="#popup"
+                class="button button_brand button_size_l js-popup"
+                data-effect="mfp-zoom-in"
+              >
                 Рассчитать шкаф
-              </button>
+              </a>
             </div>
           </section>
         </div>
@@ -658,12 +699,11 @@
           <div class="container">
             <header class="wardrobe__header">
               <h2 class="title title_three title_light title_order_l">
-                Гардероб - любовь с&nbsp;первого взгляда
+                Преимущества ON&nbsp;SHELF
               </h2>
               <p>
-                Ищете одноместный, двухместный или трехместный гардероб? Наш
-                продукт был тщательно разработан экспертами, чтобы воплотить в
-                жизнь все ваши пожелания. Каждая деталь имеет значение.
+                Наш продукт был разработан дизайнерами и экспертами, чтобы
+                воплотить в жизнь все ваши пожелания. Продумана каждая деталь.
               </p>
             </header>
           </div>
@@ -674,18 +714,18 @@
                 <span class="wardrobe__line js-wardrobe__line"></span>
                 <img
                   class="image wardrobe__img js-wardrobe__img is-active"
-                  src="./static/images/wardrobe/wardrobe__img-1.webp"
+                  src="./static/images/wardrobe/wardrobe__img-1_1.webp"
                   alt="Картинка товара"
                 />
                 <img
                   class="image wardrobe__img js-wardrobe__img"
-                  src="./static/images/wardrobe/wardrobe__img-2.webp"
+                  src="./static/images/wardrobe/wardrobe__img-1_2.webp"
                   loading="lazy"
                   alt="Картинка товара"
                 />
                 <img
                   class="image wardrobe__img js-wardrobe__img"
-                  src="./static/images/wardrobe/wardrobe__img-3.webp"
+                  src="./static/images/wardrobe/wardrobe__img-1_3.webp"
                   loading="lazy"
                   alt="Картинка товара"
                 />
@@ -693,9 +733,8 @@
               <div class="wardrobe__info js-wardrobe__info">
                 <p class="wardrobe__title">Лучшее использование пространства</p>
                 <p class="wardrobe__text">
-                  Подбранные размеры означают, что вы можете спроектировать
-                  гардероб, который поместится именно там, где вам нужно, вплоть
-                  до последнего сантиметра.
+                  Шкаф поместится там, где вам нужно. Вы сами выбираете размеры
+                  с точностью до миллиметра.
                 </p>
               </div>
             </article>
@@ -704,18 +743,18 @@
                 <span class="wardrobe__line js-wardrobe__line"></span>
                 <img
                   class="image wardrobe__img js-wardrobe__img is-active"
-                  src="./static/images/wardrobe/wardrobe__img-1.webp"
+                  src="./static/images/wardrobe/wardrobe__img-2_1.webp"
                   alt="Картинка товара"
                 />
                 <img
                   class="image wardrobe__img js-wardrobe__img"
-                  src="./static/images/wardrobe/wardrobe__img-2.webp"
+                  src="./static/images/wardrobe/wardrobe__img-2_2.webp"
                   loading="lazy"
                   alt="Картинка товара"
                 />
                 <img
                   class="image wardrobe__img js-wardrobe__img"
-                  src="./static/images/wardrobe/wardrobe__img-3.webp"
+                  src="./static/images/wardrobe/wardrobe__img-2_3.webp"
                   loading="lazy"
                   alt="Картинка товара"
                 />
@@ -723,9 +762,8 @@
               <div class="wardrobe__info js-wardrobe__info">
                 <p class="wardrobe__title">Понятный процесс проектирования</p>
                 <p class="wardrobe__text">
-                  Больше никаких догадок. Наш онлайн-конфигуратор с 12
-                  предустановленными сегментами поможет вам найти лучший
-                  гардероб для любых нужд хранения.
+                  Не нужно гадать. Наш онлайн-конфигуратор с 16 продуманными
+                  наполнениями поможет вам найти лучший гардероб для любых нужд.
                 </p>
               </div>
             </article>
@@ -734,28 +772,27 @@
                 <span class="wardrobe__line js-wardrobe__line"></span>
                 <img
                   class="image wardrobe__img js-wardrobe__img is-active"
-                  src="./static/images/wardrobe/wardrobe__img-1.webp"
+                  src="./static/images/wardrobe/wardrobe__img-3_1.webp"
                   alt="Картинка товара"
                 />
                 <img
                   class="image wardrobe__img js-wardrobe__img"
-                  src="./static/images/wardrobe/wardrobe__img-2.webp"
+                  src="./static/images/wardrobe/wardrobe__img-3_2.webp"
                   loading="lazy"
                   alt="Картинка товара"
                 />
                 <img
                   class="image wardrobe__img js-wardrobe__img"
-                  src="./static/images/wardrobe/wardrobe__img-3.webp"
+                  src="./static/images/wardrobe/wardrobe__img-3_3.webp"
                   loading="lazy"
                   alt="Картинка товара"
                 />
               </div>
               <div class="wardrobe__info js-wardrobe__info">
-                <p class="wardrobe__title">Надежный, долговечный</p>
+                <p class="wardrobe__title">Надежность, долговечность</p>
                 <p class="wardrobe__text">
-                  Материалы премиум - класса соответствуют тщательно
-                  разработанным функциям для создания превосходного ощущения,
-                  который прослужит всю жизнь.
+                  Премиум материалы и комплектующие прослужат вам долгие годы,
+                  оставляя впечатления от использования неизменными.
                 </p>
               </div>
             </article>
@@ -767,7 +804,7 @@
         <div class="container container_small">
           <section class="segments">
             <h2 class="title title_three title_order_l">
-              16 интеллектуальных сегментов для удобной организации
+              16 продуманных наполнений для лучшей организации хранения
             </h2>
             <div class="segments__box" style="position: relative;">
               <div class="segments__container js-segments__container">
@@ -786,10 +823,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с рейлом</p>
+                          <p class="grid__title">Очень длинный рейл</p>
                           <p class="grid__text">
-                            Полноразмерный подвесной рейл, идеально подходящий
-                            для крупногабаритной одежды.
+                            Стальной рейл, идеально подходящий для длинной
+                            одежды.
                           </p>
                         </div>
                       </div>
@@ -809,9 +846,9 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с двумя рейлами</p>
+                          <p class="grid__title">Двойной рейл</p>
                           <p class="grid__text">
-                            Два подвесных рейла - идеально подходят для хранения
+                            Два стальных рейла — идеально подходят для хранения
                             короткой одежды.
                           </p>
                         </div>
@@ -832,10 +869,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с рейлом и полками</p>
+                          <p class="grid__title">Длинный рейл</p>
                           <p class="grid__text">
-                            Рейл для развешивания одежды средней длины, сверху и
-                            снизу полки - для более крупных вещей.
+                            Рейл для одежды средней длины, снизу полки для
+                            крупных вещей.
                           </p>
                         </div>
                       </div>
@@ -855,9 +892,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с 2 ящиками</p>
+                          <p class="grid__title">Длинный рейл + 2 ящика</p>
                           <p class="grid__text">
-                            Рейл для предметов средней длины, а также два ящика.
+                            Рейл для одежды средней длины, а также два
+                            внутренних ящика.
                           </p>
                         </div>
                       </div>
@@ -877,10 +915,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф</p>
+                          <p class="grid__title">Рейл с полками</p>
                           <p class="grid__text">
-                            Рейл для более короткой одежды с открытыми полками
-                            для хранения.
+                            Рейл для более короткой одежды с дополнительными
+                            полками для хранения.
                           </p>
                         </div>
                       </div>
@@ -900,10 +938,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с 2 ящиками</p>
+                          <p class="grid__title">Рейл + 2 ящика</p>
                           <p class="grid__text">
-                            Универсальный шкаф с рейлом, двумя низкими ящиками и
-                            полкой для хранения.
+                            Универсальный шкаф с рейлом, двумя ящиками и полкой
+                            для хранения.
                           </p>
                         </div>
                       </div>
@@ -923,9 +961,9 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с 4 ящиками</p>
+                          <p class="grid__title">Рейл + 4 ящика</p>
                           <p class="grid__text">
-                            Короткая подвесная секция плюс четыре ящика.
+                            Рейл для короткой одежды плюс четыре ящика.
                           </p>
                         </div>
                       </div>
@@ -945,9 +983,9 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф</p>
+                          <p class="grid__title">Шкаф с полками</p>
                           <p class="grid__text">
-                            Ряд полок - идеально подходит для коробок, более
+                            Ряд полок — идеально подходит для коробок и более
                             объемных предметов одежды.
                           </p>
                         </div>
@@ -968,10 +1006,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф</p>
+                          <p class="grid__title">Шкаф с низкими полками</p>
                           <p class="grid__text">
-                            Ряд более узких полок для более точной сортировки и
-                            меньшей организации.
+                            Ряд низких полок для более точной сортировки
+                            предметов.
                           </p>
                         </div>
                       </div>
@@ -991,7 +1029,7 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с 2 ящиками</p>
+                          <p class="grid__title">Полки + 2 ящика</p>
                           <p class="grid__text">
                             Ряд полок плюс два ящика для хранения мелких
                             предметов.
@@ -1014,9 +1052,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с 4 ящиками</p>
+                          <p class="grid__title">Полки + 4 ящика</p>
                           <p class="grid__text">
-                            Две секции и четыре ящика.
+                            Полки плюс четыре ящика для хранения мелких
+                            предметов.
                           </p>
                         </div>
                       </div>
@@ -1036,10 +1075,9 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с 6 ящиками</p>
+                          <p class="grid__title">Полки + 6 ящиков</p>
                           <p class="grid__text">
-                            Шесть ящиков и удобные полки для дополнительного
-                            места.
+                            Шесть ящиков и две полки для различных предметов.
                           </p>
                         </div>
                       </div>
@@ -1059,10 +1097,10 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с внешними ящиками</p>
+                          <p class="grid__title">Рейл с внешними ящиками</p>
                           <p class="grid__text">
-                            Шкаф с рейлом для предметов средней длины, а также
-                            два внешних ящика для скрытого хранения.
+                            Рейл для одежды средней длины, а также два внешних
+                            ящика для быстрого доступа.
                           </p>
                         </div>
                       </div>
@@ -1082,11 +1120,13 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с внешними ящиками</p>
+                          <p class="grid__title">
+                            Рейл + 1 ящик + внешние ящики
+                          </p>
                           <p class="grid__text">
-                            Шкаф с рейлом для коротких предметов, плюс один
-                            внутренний ящик, чтобы скрыть мелкие предметы, и два
-                            внешних ящика для дополнительного хранения.
+                            Рейлом для короткой одежды, плюс один внутренний
+                            ящик для мелких предметов, два внешних ящика для
+                            быстрого доступа.
                           </p>
                         </div>
                       </div>
@@ -1106,7 +1146,9 @@
                           </div>
                         </div>
                         <div class="grid__bottom">
-                          <p class="grid__title">Шкаф с внешними ящиками</p>
+                          <p class="grid__title">
+                            Рейл + 2 ящика + внешние ящики
+                          </p>
                           <p class="grid__text">
                             Шкаф с полками, один внутренний ящик для мелких
                             предметов, а также два внешних ящика для быстрого
@@ -1131,12 +1173,12 @@
                         </div>
                         <div class="grid__bottom">
                           <p class="grid__title">
-                            Шкаф с внутренними и внешними ящиками
+                            Рейл + 3 ящика + внешние ящики
                           </p>
                           <p class="grid__text">
                             Шкаф с двумя полками для объемных предметов, тремя
-                            внутренними ящиками, для скрытого хранения и двумя
-                            внешними ящиками, для более быстрого доступа.
+                            внутренними ящиками, и двумя внешними ящиками для
+                            быстрого доступа.
                           </p>
                         </div>
                       </div>
@@ -1455,19 +1497,32 @@
         <section class="callback">
           <div class="container">
             <div class="callback__wrap">
-              <h2 class="title title_three title_order_l">
-                Закажите выезд специалиста с образцами.
-              </h2>
-              <p class="callback__text">
-                Оставьте заявку на замер, мы свяжемся с вами и согласуем время
-                замера.
-              </p>
-              <p class="callback__text">Данная услуга <b>Бесплатна!</b></p>
-              <div class="callback__btn">
-                <button class="button button_brand button_size_l">
-                  Вызвать замерщика
-                </button>
-              </div>
+              <script>
+                /*eslint-disable*/
+                !(function(a, m, o, c, r) {
+                  ;(a[o + c] = a[o + c] || {
+                    setMeta: function(p) {
+                      this.params = (this.params || []).concat([p])
+                    },
+                  }),
+                    (a[o + r] =
+                      a[o + r] ||
+                      function(f) {
+                        a[o + r].f = (a[o + r].f || []).concat([f])
+                      }),
+                    a[o + r]({
+                      id: '809863',
+                      hash: '0476ede61f4f37b8c2193bb3ef3f9347',
+                      locale: 'ru',
+                    })
+                })(window, 0, 'amo_forms_', 'params', 'load')
+              </script>
+              <script
+                id="amoforms_script_809863"
+                async="async"
+                charset="utf-8"
+                src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1636199267"
+              ></script>
             </div>
           </div>
         </section>
@@ -1476,45 +1531,30 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="">
-          <p>Адрес</p>
-          <p>График работы</p>
-          <p>Телефон</p>
-          <p>Почта</p>
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="index.html" class="logo logo_white">
+              On shelf
+            </a>
+            <div class="">
+              <p>Шкафы и системы хранения</p>
+            </div>
+          </div>
+          <div class="footer_right">
+            <a class="footer__email" href="email: zakaz@onshelf.ru">
+              zakaz@onshelf.ru
+            </a>
+          </div>
         </div>
-        <!-- <a
-            class="social__btn social__btn_vk"
-            href="https://vk.com/id606189830"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg class="social__icon-vk">
-              <use xlink:href="#vk-mono"></use>
-            </svg>
-            ВКонтакте
-          </a>
-          <a
-            class="social__btn social__btn_inst"
-            href="https://www.instagram.com/chistaya58penza?r=nametag"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg class="social__icon-inst">
-              <use xlink:href="#inst-mono"></use>
-            </svg>
-            Instagram
-          </a> -->
         <p class="footer__copy">
-          Copiright &copy; 2021
-          <!-- Разработано
-          <a
-            class="footer__link"
-            href="https://www.instagram.com/_dmitriy_40in_/"
-            target="_blank"
-            rel="noopener"
-            >dmitriy_40in</a
-          >
-          2020г. -->
+          Copiright &copy; 2021 -
+          <script type="text/javascript">
+            document.write(new Date().getFullYear())
+          </script>
+          ,
+          <span class="logo logo_grey">
+            On shelf
+          </span>
         </p>
       </div>
     </footer>
@@ -1524,6 +1564,63 @@
         <use xlink:href="#keyboard_arrow_up"></use>
       </svg>
     </button>
+    <!-- popup -->
+    <div id="popup" class="popup mfp-with-anim mfp-hide">
+      <script>
+        /*eslint-disable*/
+        !(function(a, m, o, c, r) {
+          ;(a[o + c] = a[o + c] || {
+            setMeta: function(p) {
+              this.params = (this.params || []).concat([p])
+            },
+          }),
+            (a[o + r] =
+              a[o + r] ||
+              function(f) {
+                a[o + r].f = (a[o + r].f || []).concat([f])
+              }),
+            a[o + r]({
+              id: '871372',
+              hash: 'c92b04d8255d9af1fc6f3a4667dde901',
+              locale: 'ru',
+            })
+        })(window, 0, 'amo_forms_', 'params', 'load')
+      </script>
+      <script
+        id="amoforms_script_871372"
+        async="async"
+        charset="utf-8"
+        src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1638629732"
+      ></script>
+    </div>
+
     <script src="js/jquery_3.5.1.min.js"></script>
+
+    <script>
+      /*eslint-disable*/
+      ;(function(a, m, o, c, r, m) {
+        a[m] = {
+          id: '82295',
+          hash:
+            '92612242b79802ab406053b11cba21ad0552ce740accfef6f19f7cc283a10e03',
+          locale: 'ru',
+          inline: true,
+          setMeta: function(p) {
+            this.params = (this.params || []).concat([p])
+          },
+        }
+        a[o] =
+          a[o] ||
+          function() {
+            ;(a[o].q = a[o].q || []).push(arguments)
+          }
+        var d = a.document,
+          s = d.createElement('script')
+        s.async = true
+        s.id = m + '_script'
+        s.src = 'https://gso.amocrm.ru/js/button.js?1641998111'
+        d.head && d.head.appendChild(s)
+      })(window, 0, 'amoSocialButton', 0, 0, 'amo_social_button')
+    </script>
   </body>
 </html>
