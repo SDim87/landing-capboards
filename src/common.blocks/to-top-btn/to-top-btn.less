@@ -1,10 +1,10 @@
-@import (reference) '../../less/variables.less';
+@import (reference) "../../less/variables.less";
 
 .to-top-btn {
   position: fixed;
   z-index: 2147483647;
-  right: 40px;
   bottom: 40px;
+  left: 40px;
 
   display: none;
 
@@ -24,20 +24,22 @@
   fill: @color-brand;
 
   @media screen and (max-width: @phone-landscape) {
-    right: 16px;
+    left: 16px;
     bottom: 16px;
   }
 
   &__icon {
     position: fixed;
+    left: 40px;
     bottom: 40px;
-    right: 40px;
+
     width: 40px;
     height: 40px;
+
     fill: @color-brand;
 
     @media screen and (max-width: @phone-landscape) {
-      right: 16px;
+      left: 16px;
       bottom: 16px;
     }
   }
